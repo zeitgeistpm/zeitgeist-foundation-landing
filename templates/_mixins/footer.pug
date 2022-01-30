@@ -1,21 +1,21 @@
 mixin footer
     footer.footer.border-main.border-t(class='mb-[6rem]')
         .flex.flex-col.text-center(class='mt-[3.8125rem] xl:flex-row xl:text-left')
-            .grow
+            .grow.mb-4
                 h3.font-highlight.font-bold.text-lg.uppercase General
                 ul.my-4
                     li.inline-block.py-1.px-2(class='xl:list-item xl:px-0')
                         a.underline-offset-2(href='' class='hover:underline') Apps (Advanced UI)
                     li.inline-block.py-1.px-2(class='xl:list-item xl:px-0')
                         a.underline-offset-2(href='' class='hover:underline') Website
-            .grow
+            .grow.mb-4
                 h3.font-highlight.font-bold.text-lg.uppercase Technology
                 ul.my-4
                     li.inline-block.py-1.px-2(class='xl:list-item xl:px-0')
                         a.underline-offset-2(href='' class='hover:underline') Documentation
                     li.inline-block.py-1.px-2(class='xl:list-item xl:px-0')
                         a.underline-offset-2(href='' class='hover:underline') Github
-            .grow
+            .grow.mb-4
                 h3.font-highlight.font-bold.text-lg.uppercase Community
                 ul.my-4
                     li.inline-block.py-1.px-2(class='xl:list-item xl:px-0')
@@ -24,10 +24,10 @@ mixin footer
                         a.underline-offset-2(href='' class='hover:underline') Telegram
                     li.inline-block.py-1.px-2(class='xl:list-item xl:px-0')
                         a.underline-offset-2(href='' class='hover:underline') Twitter
-            .grow.order-first(class='xl:order-last')
+            .grow.mb-4.order-first(class='xl:order-last')
                 h3.font-highlight.font-bold.text-lg.uppercase Stay up to Date
                 .flex.my-6.justify-center(class='xl:justify-start')
-                    form(action='/', method='post' class='w-[340px] xl:w-auto')
+                    form(action='/', method='post' class='max-w-[340px] w-full xl:w-auto')
                         input.text-black.block.px-2.w-full.mb-5(type='text' class='h-[2.75rem] rounded-[0.625rem] xl:inline-block xl:mr-4 xl:w-auto xl:mb-0')
                         button.bg-main.w-full(class='xl:w-[2.75rem] h-[2.75rem] xl:rounded-full rounded-[6.25rem]' type='submit')
                             img.hidden(src='images/enter.svg', class='w-[12px] ml-[4px] xl:inline-block')
