@@ -1,6 +1,6 @@
 const $ = require('jquery');
 
-const breakpoint = 1200;
+const breakpoint = 708;
 
 const isDesktop = () => {
     return $(window).width() >= breakpoint;

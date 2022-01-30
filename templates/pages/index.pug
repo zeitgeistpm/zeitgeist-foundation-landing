@@ -10,12 +10,12 @@ block append head
 
 block content
     div.text-xl
-        div(class='mb-[15rem]')
-            h1.font-highlight.font-bold.uppercase.mb-4(class='text-[11.25rem] leading-[1.12]') Zeitgeist Foundation
+        div(class='xl:mb-[15rem] lg:mb-[6rem]')
+            h1.font-highlight.font-bold.uppercase(class='xl:text-[11.25rem] xl:leading-[1.12] xl:mb-4 lg:text-[6.25rem] lg:leading-[1.2] lg:mb-6') Zeitgeist Foundation
             h2.font-highlight.font-bold.text-6xl Own your future
 
         .flex(class='mb-[6.25rem] leading-[2.125rem]')
-            div
+            div.hidden(class='xl:block')
                 ul.left-menu.sticky.top-0.mb-4(class='w-[320px]')
                     each item in header.menu
                         - target = (item.target && (item.url.startsWith('http') || item.url.startsWith('/'))) ? item.target : ''
@@ -23,7 +23,7 @@ block content
                             a.flex.items-center.text-secondary.no-underline(href=item.url target=target class='text-[2.125rem] leading-[3rem] hover:text-[#BCB8FF]')
                                 img.pr-8.hidden(src='images/right-arrow.svg')
                                 span=item.text
-            div(class='mr-[9rem]')
+            div(class='xl:mr-[9rem]')
                 div#about(class='mb-[6.25rem]')
                     h2.font-highlight.font-bold.text-6xl.mb-12.text-white-shadow Zeitgeist
                     p.mb-12 Our mission is to nurture cutting-edge applications for decentralized prediction markets.
