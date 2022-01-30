@@ -1,0 +1,38 @@
+{
+  "menu": [
+    {
+      "text": "About",
+      "url": "/#about",
+      "target": "_blank"
+    },
+    {
+      "text": "Projects",
+      "url": "#",
+      "target": "_blank"
+    },
+    {
+      "text": "Grants",
+      "url": "/#grants",
+      "target": "_blank"
+    },
+    {
+      "text": "Research",
+      "url": "/#research",
+      "target": "_blank"
+    }
+  ],
+  "socialNetworks": [
+    {
+      "name": "twitter",
+      "url": ""
+    },
+    {
+      "name": "linkedin",
+      "url": ""
+    },
+    {
+      "name": "subsocial",
+      "url": ""
+    }
+  ]
+}

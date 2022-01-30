@@ -1,0 +1,21 @@
+mixin header
+    - var active = (name) => templateName === name ? 'active' : ''
+    - var labelActive = (nameArr, name) => nameArr.includes(templateName) || templateName === name ? 'label-active' : ''
+    - var childrenActive = (name) => templateName === name ? 'children-active' : ''
+    - var extractTemplateName = (url) => {if (url === '/') return 'index'; return url ? url.replace('/', '').replace('.html', '') : ''};
+
+    header.flex.items-center.relative.z-50.my-8
+        div(class='w-[50px] h-[50px]')
+            a(href='/')
+                img(src='images/logo.svg')
+        div.ml-10
+            ul.flex
+                li.px-4
+                    a.px-4.underline-offset-2(href='#about' class='hover:underline') About
+                li.px-4
+                    a.px-4.underline-offset-2(href='#' class='hover:underline') Projects
+                li.px-4
+                    a.px-4.underline-offset-2(href='#grants' class='hover:underline') Grants
+                li.px-4
+                    a.px-4.underline-offset-2(href='#research' class='hover:underline') Research
+
