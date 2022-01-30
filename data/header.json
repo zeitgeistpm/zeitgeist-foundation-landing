@@ -2,23 +2,20 @@
   "menu": [
     {
       "text": "About",
-      "url": "/#about",
-      "target": "_blank"
+      "url": "#about"
     },
     {
       "text": "Projects",
-      "url": "#",
+      "url": "https://zeitgeist.pm/",
       "target": "_blank"
     },
     {
       "text": "Grants",
-      "url": "/#grants",
-      "target": "_blank"
+      "url": "#grants"
     },
     {
       "text": "Research",
-      "url": "/#research",
-      "target": "_blank"
+      "url": "#research"
     }
   ],
   "socialNetworks": [
