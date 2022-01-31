@@ -49,7 +49,7 @@ const highlightItemBasedOnScrollTop = function(e) {
     if (currentScrollTop <= trackingScrollTops[section]) {
       if (currentAnchor !== section) {
         currentAnchor = section
-        window.location.hash = currentAnchor;
+        // window.location.hash = currentAnchor;
       }
       return;
     }
