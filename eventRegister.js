@@ -10,7 +10,7 @@ const generateJs = function() {
     return new Promise(resolve => {
         log.info('Generating JS');
 
-        const devMode = true;
+        const devMode = this.config.devMode;
 
         var b = browserify({
             entries: './js/main.js',
