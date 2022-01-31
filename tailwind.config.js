@@ -9,8 +9,7 @@ module.exports = {
       highlight: ['Kanit', 'sans-serif'],
     },
     screens: {
-      'sm': '640px',
-      'md': '640px',
+      'md': '590px',
       'lg': '708px',
       'xl': '1148px',
     },

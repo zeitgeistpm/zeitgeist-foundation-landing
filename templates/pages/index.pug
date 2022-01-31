@@ -9,12 +9,12 @@ block append head
     meta(property='description' content=siteDescription)
 
 block content
-    div.text-xl
-        div(class='xl:mb-[15rem] lg:mb-[6rem]')
-            h1.font-highlight.font-bold.uppercase(class='xl:text-[11.25rem] xl:leading-[1.12] xl:mb-4 lg:text-[6.25rem] lg:leading-[1.2] lg:mb-6') Zeitgeist Foundation
-            h2.font-highlight.font-bold.text-6xl Own your future
+    div.text-xl.text-center(class='lg:text-left')
+        div(class='xl:mb-[15rem] lg:mb-[6rem] mb-[3rem]')
+            h1.font-highlight.font-bold.uppercase(class='xl:text-[11.25rem] xl:leading-[1.12] xl:mb-4 lg:text-[6.25rem] leading-[1.2] lg:mb-6 text-[3.125rem] mb-10 mt-10 lg:mt-0') Zeitgeist Foundation
+            h2.font-highlight.font-bold(class='text-[1.875rem] lg:text-6xl') Own your future
 
-        .flex(class='mb-[6.25rem] leading-[2.125rem]')
+        .flex(class='lg:mb-[6.25rem] mb-16 leading-[2.125rem]')
             div.hidden(class='xl:block')
                 ul.left-menu.sticky.top-0.mb-4(class='w-[320px]')
                     each item in header.menu
@@ -24,56 +24,56 @@ block content
                                 img.pr-8.hidden(src='images/right-arrow.svg')
                                 span=item.text
             div(class='xl:mr-[9rem]')
-                div#about(class='mb-[6.25rem]')
-                    h2.font-highlight.font-bold.text-6xl.mb-12.text-white-shadow Zeitgeist
+                div#about(class='lg:mb-[6.25rem] mb-16')
+                    h2.font-highlight.font-bold.mb-12.text-white-shadow(class='text-[2.5rem] lg:text-6xl') Zeitgeist
                     p.mb-12 Our mission is to nurture cutting-edge applications for decentralized prediction markets.
                     p.mb-12 Our passion is delivering the Zeitgeist platform, a decentralized and innovative place where people can create, trade, and resolve their own markets.
                     div(class='bg-[#1B1B1B] rounded-[0.876rem] mt-16')
-                        .flex(class='p-[2.625rem]')
-                            div
-                                div(class='w-[5.375rem] h-[5.375rem] mr-[2.625rem]')
+                        .flex.flex-col(class='lg:px-[2.625rem] px-4 py-[2.625rem] lg:flex-row')
+                            div.mx-auto
+                                div.mr-0(class='w-[5.375rem] h-[5.375rem] lg:mr-[2.625rem] mb-[2.625rem]')
                                     img(src='images/gradient-ball.svg')
                             div
-                                h2.font-highlight.font-semibold.mb-8(class='text-[2.8125rem] leading-[1.22] mt-[-0.8rem]') We support Teams and Open-source Projects
+                                h2.font-highlight.font-semibold.mb-8(class='text-[1.875rem] lg:text-[2.8125rem] leading-[1.22] mt-0 lg:mt-[-0.8rem]') We support Teams and Open-source Projects
                                 p through funding, advocacy, research, and collaborations.
-                div#grants(class='mb-[6.25rem]')
-                    h2.font-highlight.font-bold.text-6xl.mb-12.text-white-shadow Grants
+                div#grants(class='lg:mb-[6.25rem] mb-16')
+                    h2.font-highlight.font-bold.mb-12.text-white-shadow(class='text-[2.5rem] lg:text-6xl') Grants
                     p.mb-12 To further our mission, the Zeitgeist Foundation grants program funds software development and research in the field of decentralized prediction markets.
                     div(class='bg-[#1B1B1B] rounded-[0.876rem] mt-16')
-                        .flex(class='p-[2.625rem]')
-                            div
-                                div(class='w-[5.375rem] h-[5.375rem] mr-[2.625rem]')
+                        .flex.flex-col(class='lg:px-[2.625rem] px-4 py-[2.625rem] lg:flex-row')
+                            div.mx-auto
+                                div.mr-0(class='w-[5.375rem] h-[5.375rem] lg:mr-[2.625rem] mb-[2.625rem]')
                                     img(src='images/gradient-ball.svg')
                             div
-                                h2.font-highlight.font-semibold.mb-8.mt-4.text-white-shadow(class='text-[2.8125rem] leading-[1.22]') Philosophy
+                                h2.font-highlight.font-semibold.mb-8.text-white-shadow(class='text-[1.875rem] lg:text-[2.8125rem] leading-[1.22] mt-0 lg:mt-4') Philosophy
                                 p.mb-12 Our grants program's aim is to steward the prediction market ecosystem and carefully manage Zeitgeist Foundation resources. We provide grants that we believe will return the highest impact on the prediction market ecosystem over the long term.
                                 p.mb-4 Zeitgeist Foundation awards grants for specific projects and pieces of development work. Grant recipients should not be considered partners of Zeitgeist or the Zeitgeist Foundation.
-                div(class='mb-[6.25rem]')
-                    h2.font-highlight.font-bold.text-6xl.mb-12(class='text-[2.8125rem]') Grant Program
+                div(class='lg:mb-[6.25rem] mb-16')
+                    h2.font-highlight.font-bold.mb-12(class='text-[1.875rem] lg:text-[2.8125rem]') Grant Program
                     p.mb-14 Our Grant Program provides grants for public applications, which are tracked transparently on Github and disbursed in cryptocurrencies.
-                    a(href='#' class='text-[1.625rem] rounded-[6.25rem] py-[0.8rem] px-[3.4rem]' style='background: linear-gradient(90deg, #1C1352 -13.04%, rgba(17, 106, 239, 0) 111.96%), #8F21E1;') Apply
-                div.mb-8#research
-                    h2.font-highlight.font-bold.text-6xl.mb-12.text-white-shadow Research
+                    a.inline-block(href='#' class='text-[1.625rem] rounded-[6.25rem] py-[0.8rem] px-[3.4rem]' style='background: linear-gradient(90deg, #1C1352 -13.04%, rgba(17, 106, 239, 0) 111.96%), #8F21E1;') Apply
+                div.mb-0#research(class='lg:mb-8')
+                    h2.font-highlight.font-bold.mb-12.text-white-shadow(class='text-[2.5rem] lg:text-6xl') Research
                     p.mb-12 Our research team confronts the most difficult research problems standing between us and a decentralized prediction market ecosystem.
                     p.mb-16 The Zeitgeist Foundation research is conducted in-house and in collaboration with various projects and research organizations.
-                    div.flex(class='mb-[7.5rem]')
-                        div
-                            div(class='w-[8.75rem] h-[8.75rem] mr-[2.625rem]')
+                    div.flex.flex-col(class='lg:mb-[7.5rem] mb-12 lg:flex-row')
+                        div.mx-auto
+                            div(class='w-[8.75rem] h-[8.75rem] mr-0 lg:mr-[2.625rem] mb-[2.625rem]')
                                 img(src='images/area-1.svg')
                         div
-                            h2.font-highlight.font-semibold.mb-8(class='text-[2.8125rem] leading-[1.22] mt-[-0.8rem]') Area 1
+                            h2.font-highlight.font-semibold.mb-8(class='text-[1.875rem] lg:text-[2.8125rem] leading-[1.22] mt-[-0.8rem]') Area 1
                             p Seers with this title are the developers of the community. They actively contribute to the community through several different technical avenues. Thaumaturges actively develop, bughunt, document, guide, and deploy on the Zeitgeist protocol.
-                    div.flex(class='mb-[7.5rem]')
-                        div
-                            div(class='w-[8.75rem] h-[8.75rem] mr-[2.625rem]')
+                    div.flex.flex-col(class='lg:mb-[7.5rem] mb-12 lg:flex-row')
+                        div.mx-auto
+                            div(class='w-[8.75rem] h-[8.75rem] mr-0 lg:mr-[2.625rem] mb-[2.625rem]')
                                 img(src='images/area-2.svg')
                         div
-                            h2.font-highlight.font-semibold.mb-8(class='text-[2.8125rem] leading-[1.22] mt-[-0.8rem]') Area 2
+                            h2.font-highlight.font-semibold.mb-8(class='text-[1.875rem] lg:text-[2.8125rem] leading-[1.22] mt-[-0.8rem]') Area 2
                             p Seers with this title are the market creators of the Zeitgeist ecosystem. They focus on creating and actively participating in prediction markets deployed on the Zeitgeist protocol. By creating, participating, and reviewing prediction markets deployed on Zeitgeist they provide valuable insights of evolving Zeitgeist's prediction market ecosystem.
-                    div.flex
-                        div
-                            div(class='w-[8.75rem] h-[8.75rem] mr-[2.625rem]')
+                    div.flex.flex-col(class='lg:flex-row')
+                        div.mx-auto
+                            div(class='w-[8.75rem] h-[8.75rem] mr-0 lg:mr-[2.625rem] mb-[2.625rem]')
                                 img(src='images/area-3.svg')
                         div
-                            h2.font-highlight.font-semibold.mb-8(class='text-[2.8125rem] leading-[1.22] mt-[-0.8rem]') Area 3
+                            h2.font-highlight.font-semibold.mb-8(class='text-[1.875rem] lg:text-[2.8125rem] leading-[1.22] mt-[-0.8rem]') Area 3
                             p Seers with this title are the creative outlet of the Zeitgeist ecosystem. They focus on creating content around Zeitgeist, such as blog posts, video content, and graphic design.
