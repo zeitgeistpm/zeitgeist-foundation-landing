@@ -43,13 +43,15 @@ const trackingScrollTops = trackingAnchors.reduce((rs, section) => {
 
 let currentAnchor = '';
 const highlightItemBasedOnScrollTop = function(e) {
+  const location = window.location;
   const currentScrollTop = $(document).scrollTop();
 
   for (let section of trackingAnchors) {
     if (currentScrollTop <= trackingScrollTops[section]) {
       if (currentAnchor !== section) {
         currentAnchor = section
-        // window.location.hash = currentAnchor;
+        window.history.replaceState({}, '', location.origin + location.pathname + currentAnchor)
+        highlightItem(currentAnchor);
       }
       return;
     }
