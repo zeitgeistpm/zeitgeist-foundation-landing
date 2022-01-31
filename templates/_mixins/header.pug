@@ -1,23 +1,28 @@
 mixin header
-    - var active = (name) => templateName === name ? 'active' : ''
-    - var labelActive = (nameArr, name) => nameArr.includes(templateName) || templateName === name ? 'label-active' : ''
-    - var childrenActive = (name) => templateName === name ? 'children-active' : ''
-    - var extractTemplateName = (url) => {if (url === '/') return 'index'; return url ? url.replace('/', '').replace('.html', '') : ''};
-
     header.flex.items-center.relative.z-50.my-8.justify-between(class='xl:justify-start')
-        div(class='w-[50px] h-[50px]')
+        div.relative.z-50(class='w-[50px] h-[50px]')
             a(href='/')
                 img(src='images/logo.svg')
         div.ml-10
             ul.hidden(class='xl:flex')
+              each item in header.menu
+                - target = (item.target && (item.url.startsWith('http') || item.url.startsWith('/'))) ? item.target : ''
                 li.px-4
-                    a.px-4.underline-offset-2(href='#about' class='hover:underline') About
-                li.px-4
-                    a.px-4.underline-offset-2(href='#' class='hover:underline') Projects
-                li.px-4
-                    a.px-4.underline-offset-2(href='#grants' class='hover:underline') Grants
-                li.px-4
-                    a.px-4.underline-offset-2(href='#research' class='hover:underline') Research
-            div.hamburger.rounded-full.bg-main.flex.items-center.justify-center(class='xl:hidden w-[3.25rem] h-[3.25rem]')
-                img(src='images/hamburger.svg')
+                    a.px-4.underline-offset-2(href=item.url target=target class='hover:underline')=item.text
+            div.relative.hamburger.rounded-full.bg-main.flex.items-center.justify-center.z-50(class='xl:hidden w-[3.25rem] h-[3.25rem]')
+                div.hamburger-menu(role='button')
+                    div.hamburger-menu__meat
+            div.mobile-menu.hidden.flex.flex-col.justify-center.items-center.fixed.top-0.left-0.right-0.bg-black.h-full.z-10
+                ul.mobile-menu--nav.text-center
+                  each item in header.menu
+                    - target = (item.target && (item.url.startsWith('http') || item.url.startsWith('/'))) ? item.target : ''
+                    li.px-4
+                        a.px-4.underline-offset-2.font-highlight.font-bold(href=item.url target=target class='hover:underline text-[2.5rem] lg:text-[2.8125rem]')=item.text
+                div.mobile-menu--social.flex
+                  each item in header.socialLinks
+                    a.flex.justify-center.items-center.rounded-full.bg-main.mx-2.mb-4.mt-16(href=item.url class='w-[3.25rem] h-[3.25rem] hover:bg-secondary' title=item.name target='_blank')
+                        img(src=item.icon alt=item.name class='h-2/5')
+
+
+
 

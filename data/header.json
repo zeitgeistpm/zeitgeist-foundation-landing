@@ -18,18 +18,21 @@
       "url": "#research"
     }
   ],
-  "socialNetworks": [
+  "socialLinks": [
     {
-      "name": "twitter",
-      "url": ""
+      "name": "Twitter",
+      "icon": "images/twitter.svg",
+      "url": "#"
     },
     {
-      "name": "linkedin",
-      "url": ""
+      "name": "Linkedin",
+      "icon": "images/linkedin.svg",
+      "url": "#"
     },
     {
-      "name": "subsocial",
-      "url": ""
+      "name": "Subsocial",
+      "icon": "images/subsocial.svg",
+      "url": "#"
     }
   ]
 }

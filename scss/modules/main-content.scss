@@ -1,13 +1,12 @@
 body {
   overflow-x: hidden;
 
-  @media (max-width: breakpoint-min('xl')) {
-    &.no-scrolling {
-      overflow-y: hidden;
-    }
+  &.no-scrolling {
+    overflow-y: hidden;
+  }
 
-    &.position-fixed {
-      position: fixed; // fix for ios devices
-    }
+  &.position-fixed {
+    position: fixed; // fix for ios devices
+    width: 100%;
   }
 }
