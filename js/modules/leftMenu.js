@@ -1,9 +1,4 @@
 const $ = require('jquery');
-const env = require('./env');
-
-if (env.isMobile()) {
-  return;
-}
 
 const $leftMenu = $('ul.left-menu');
 const trackingAnchors = ['#about', '#grants', '#research'];
