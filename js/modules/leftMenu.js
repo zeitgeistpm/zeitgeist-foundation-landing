@@ -29,15 +29,41 @@ const removeHighlightForAllItems = () => {
   });
 }
 
+const highlightItem = (hashName) => {
+  removeHighlightForAllItems();
+  enableHighlight($leftMenu.find("li > a[href=\"" + hashName +"\"]"))
+}
+
 function locationHashChanged() {
   let hash = location.hash;
   if (trackingAnchors.indexOf(hash) > -1) {
-    removeHighlightForAllItems();
-    enableHighlight($leftMenu.find("li > a[href=\"" + hash +"\"]"))
+    highlightItem(hash);
+  }
+}
+
+const trackingScrollTops = trackingAnchors.reduce((rs, section) => {
+  rs[section] = $(section).offset().top + $(section).outerHeight() - 200
+  return rs;
+}, {});
+
+let currentAnchor = '';
+const highlightItemBasedOnScrollTop = function(e) {
+  const currentScrollTop = $(document).scrollTop();
+
+  for (let section of trackingAnchors) {
+    if (currentScrollTop <= trackingScrollTops[section]) {
+      if (currentAnchor !== section) {
+        currentAnchor = section
+        window.location.hash = currentAnchor;
+      }
+      return;
+    }
   }
 }
 
 module.exports = () => {
   window.addEventListener("hashchange", locationHashChanged, false);
   locationHashChanged();
+
+  document.addEventListener('scroll', highlightItemBasedOnScrollTop, false);
 }
