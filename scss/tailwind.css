@@ -6,4 +6,24 @@
     .text-white-shadow {
         text-shadow: 0px 2px 50px rgba(255, 255, 255, 0.728521);
     }
+
+    .bg-size-150 {
+        background-size: 150%;
+    }
+
+    .bg-size-170 {
+        background-size: 170%;
+    }
+
+    .bg-size-200 {
+        background-size: 200%;
+    }
+
+    .bg-size-300 {
+        background-size: 300%;
+    }
+
+    .bg-position-right-30-top-10 {
+        background-position: right 30% top 10%;
+    }
 }

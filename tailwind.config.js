@@ -16,7 +16,8 @@ module.exports = {
     extend: {
       colors: {
         main: '#0001FE',
-        secondary: '#8078FF'
+        secondary: '#8078FF',
+        dimmer: '#748296'
       }
     },
   },

@@ -22,9 +22,10 @@ html(lang='en')
             +common-og-tags(displayTitle)
         block head-extra
     body.font-main.bg-black.text-white
-        div.myblog.main-content.container.mx-auto(class='px-[2.8125rem] lg:px-6')
+        div.myblog.main-content
             main.page-content(class=`page-${templateName}`)
-                +header
-                block content
+                .container.mx-auto(class='px-[2.8125rem] lg:px-6')
+                    +header
+                    block content
                 +footer
         script(src=url('/main.js'))
