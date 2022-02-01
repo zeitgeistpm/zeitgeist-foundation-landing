@@ -9,6 +9,9 @@ block append head
     meta(property='description' content=siteDescription)
 
 block content
+    div.absolute.top-0.left-0.right-0.bg-no-repeat(class='h-[1379px] xl:bg-contain lg:bg-size-170 xl:bg-right-top bg-size-300 bg-[right_30%_top] -z-50' style='background-image: url(\'images/background-top.png\')')
+    div.absolute.left-0.right-0.bg-contain.bg-no-repeat.hidden(class='xl:block top-[700px] h-[1800px] -z-50' style='background-image: url(\'images/background-mid-1-left.png\')')
+    div.absolute.left-0.right-0.bg-no-repeat.bg-right(class='top-[1000px] xl:bg-contain xl:h-[1800px] h-[2000px] lg:bg-size-150 bg-size-200 -z-50' style='background-image: url(\'images/background-mid-1-mobile.png\')')
     div.text-xl.text-center(class='lg:text-left')
         div(class='xl:mb-[15rem] lg:mb-[6rem] mb-[3rem]')
             h1.font-highlight.font-bold.uppercase(class='xl:text-[11.25rem] xl:leading-[1.12] xl:mb-4 lg:text-[6.25rem] leading-[1.2] lg:mb-6 text-[3.125rem] mb-10 mt-10 lg:mt-0') Zeitgeist Foundation
@@ -17,12 +20,12 @@ block content
         .flex(class='lg:mb-[6.25rem] mb-16 leading-[2.125rem]')
             div.hidden(class='xl:block')
                 ul.left-menu.sticky.top-0.mb-4(class='w-[320px]')
-                    each item in header.menu
-                        - target = (item.target && (item.url.startsWith('http') || item.url.startsWith('/'))) ? item.target : ''
-                        li.font-highlight.font-bold.uppercase.py-4(class='first:pt-2')
-                            a.flex.items-center.text-secondary.no-underline(href=item.url target=target class='text-[2.125rem] leading-[3rem] hover:text-[#BCB8FF]')
-                                img.pr-8.hidden(src='images/right-arrow.svg')
-                                span=item.text
+                  each item in header.menu
+                    - target = (item.target && (item.url.startsWith('http') || item.url.startsWith('/'))) ? item.target : ''
+                    li.font-highlight.font-bold.uppercase.py-4(class='first:pt-2')
+                        a.flex.items-center.text-secondary.no-underline(href=item.url target=target class='text-[2.125rem] leading-[3rem] hover:text-[#BCB8FF]')
+                            img.pr-8.hidden(src='images/right-arrow.svg')
+                            span=item.text
             div(class='xl:mr-[9rem]')
                 div#about(class='lg:mb-[6.25rem] mb-16')
                     h2.font-highlight.font-bold.mb-12.text-white-shadow(class='text-[2.5rem] lg:text-6xl') Zeitgeist
@@ -53,6 +56,7 @@ block content
                         p.mb-14 Our Grant Program provides grants for public applications, which are tracked transparently on Github and disbursed in cryptocurrencies.
                         a.inline-block(href='#' class='text-[1.625rem] rounded-[6.25rem] py-[0.8rem] px-[3.4rem]' style='background: linear-gradient(90deg, #1C1352 -13.04%, rgba(17, 106, 239, 0) 111.96%), #8F21E1;') Apply
                 div.mb-0#research(class='lg:mb-8')
+                    div.absolute.left-0.right-0.bg-no-repeat(class='xl:block lg:hidden block top-[2600px] h-[1630px] xl:bg-contain bg-size-200 opacity-70 -z-50' style='background-image: url(\'images/background-mid-2.png\')')
                     h2.font-highlight.font-bold.mb-12.text-white-shadow(class='text-[2.5rem] lg:text-6xl') Research
                     p.mb-12 Our research team confronts the most difficult research problems standing between us and a decentralized prediction market ecosystem.
                     p.mb-16 The Zeitgeist Foundation research is conducted in-house and in collaboration with various projects and research organizations.

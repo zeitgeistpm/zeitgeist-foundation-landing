@@ -1,5 +1,5 @@
 mixin header
-    header.flex.items-center.relative.z-50.my-8.justify-between(class='xl:justify-start')
+    header.flex.items-center.relative.z-50.py-8.justify-between.mt-8(class='xl:justify-start')
         div.relative.z-50(class='w-[50px] h-[50px]')
             a(href=url('/'))
                 img(src='images/logo.svg')
@@ -9,7 +9,7 @@ mixin header
                 - target = (item.target && (item.url.startsWith('http') || item.url.startsWith('/'))) ? item.target : ''
                 li.px-4
                     a.px-4.underline-offset-2(href=item.url target=target class='hover:underline')=item.text
-            div.relative.hamburger.rounded-full.bg-main.flex.items-center.justify-center.z-50(class='xl:hidden w-[3.25rem] h-[3.25rem]')
+            div.relative.hamburger.rounded-full.bg-black.flex.items-center.justify-center.z-50(class='xl:hidden w-[3.25rem] h-[3.25rem]')
                 div.hamburger-menu(role='button')
                     div.hamburger-menu__meat
             div.mobile-menu.hidden.flex.flex-col.justify-center.items-center.fixed.top-0.left-0.right-0.bg-black.h-full.z-10
