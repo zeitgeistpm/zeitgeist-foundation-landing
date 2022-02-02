@@ -1,7 +1,7 @@
 extends ../_layouts/main
 
 block prepend head
-    - var title = siteDescription
+  - var title = siteDescription
 
 block append head
     meta(property='og:description' content=siteDescription)
@@ -12,6 +12,10 @@ block content
     div.absolute.top-0.left-0.right-0.bg-no-repeat(class='h-[1379px] xl:bg-contain lg:bg-size-170 xl:bg-right-top bg-size-300 bg-[right_30%_top] -z-50' style='background-image: url(\'images/background-top.png\')')
     div.absolute.left-0.right-0.bg-contain.bg-no-repeat.hidden(class='xl:block top-[700px] h-[1800px] -z-50' style='background-image: url(\'images/background-mid-1-left.png\')')
     div.absolute.left-0.right-0.bg-no-repeat.bg-right(class='top-[1000px] xl:bg-contain xl:h-[1800px] h-[2000px] lg:bg-size-150 bg-size-200 -z-50' style='background-image: url(\'images/background-mid-1-mobile.png\')')
+    div.fixed.flex-col.top-16.right-10.hidden(class='xl:flex')
+      each item in header.socialLinks
+          a.flex.justify-center.items-center.rounded-full.bg-main.mx-2.mb-6(href=item.url class='w-[3.25rem] h-[3.25rem] hover:bg-secondary' title=item.name target='_blank')
+              img(src=item.icon alt=item.name class='h-2/5')
     div.text-xl.text-center(class='lg:text-left')
         div(class='xl:mb-[15rem] lg:mb-[6rem] mb-[3rem]')
             h1.font-highlight.font-bold.uppercase(class='xl:text-[11.25rem] xl:leading-[1.12] xl:mb-4 lg:text-[6.25rem] leading-[1.2] lg:mb-6 text-[3.125rem] mb-10 mt-10 lg:mt-0') Zeitgeist Foundation
@@ -38,7 +42,10 @@ block content
                                     img(src='images/gradient-ball.svg')
                             div
                                 h2.font-highlight.font-semibold.mb-8(class='text-[1.875rem] lg:text-[2.8125rem] leading-[1.22] mt-0 lg:mt-[-0.8rem]') We support Teams and Open-source Projects
-                                p through funding, advocacy, research, and collaborations.
+                                .flex.items-center.flex-col(class='lg:flex-row')
+                                    p.mr-0(class='lg:mr-24 mb-[2.625rem] lg:mb-0') through funding, advocacy, research, and collaborations.
+                                    a.block(href=pageLinks.weSupport.url target=pageLinks.weSupport.target)
+                                        img(src='images/goto-arrow.svg')
                 div#grants(class='lg:mb-[6.25rem] mb-16')
                     h2.font-highlight.font-bold.mb-12.text-white-shadow(class='text-[2.5rem] lg:text-6xl') Grants
                     p.mb-12 To further our mission, the Zeitgeist Foundation grants program funds software development and research in the field of decentralized prediction markets.
@@ -54,7 +61,7 @@ block content
                     div
                         h2.font-highlight.font-bold.mb-12(class='text-[1.875rem] lg:text-[2.8125rem]') Grant Program
                         p.mb-14 Our Grant Program provides grants for public applications, which are tracked transparently on Github and disbursed in cryptocurrencies.
-                        a.inline-block(href='#' class='text-[1.625rem] rounded-[6.25rem] py-[0.8rem] px-[3.4rem]' style='background: linear-gradient(90deg, #1C1352 -13.04%, rgba(17, 106, 239, 0) 111.96%), #8F21E1;') Apply
+                        a.inline-block(href=href=pageLinks.applyGrant.url target=pageLinks.applyGrant.target class='text-[1.625rem] rounded-[6.25rem] py-[0.8rem] px-[3.4rem]' style='background: linear-gradient(90deg, #1C1352 -13.04%, rgba(17, 106, 239, 0) 111.96%), #8F21E1;') Apply
                 div.mb-0#research(class='lg:mb-8')
                     div.absolute.left-0.right-0.bg-no-repeat(class='xl:block lg:hidden block top-[2600px] h-[1630px] xl:bg-contain bg-size-200 opacity-70 -z-50' style='background-image: url(\'images/background-mid-2.png\')')
                     h2.font-highlight.font-bold.mb-12.text-white-shadow(class='text-[2.5rem] lg:text-6xl') Research

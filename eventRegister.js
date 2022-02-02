@@ -5,6 +5,8 @@ const uglify = require('gulp-uglify');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const postcss = require('gulp-postcss');
+const cleanCss = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
 
 const generateJs = function() {
     return new Promise(resolve => {
@@ -35,7 +37,7 @@ const generateTailwindCss = function() {
     return new Promise(resolve => {
         log.info('Generating TailwindCss');
 
-        // const devMode = this.config.devMode;
+        const devMode = this.config.devMode;
 
         let stream = gulp.src('./scss/tailwind.css')
           .pipe(postcss([
@@ -43,9 +45,9 @@ const generateTailwindCss = function() {
               require('autoprefixer'),
           ]))
 
-        // if (!devMode) {
-        //     stream = stream.pipe(uglify());
-        // }
+        if (!devMode) {
+            stream = stream.pipe(autoprefixer()).pipe(cleanCss());
+        }
 
         stream
           .pipe(gulp.dest(this.outputDirectory))

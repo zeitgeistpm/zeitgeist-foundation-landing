@@ -21,9 +21,7 @@
   },
   "homepage": "https://github.com/Web3Vietnam/hydradx-website#readme",
   "dependencies": {
-    "bootstrap": "^5.0.1",
     "browserify": "^17.0.0",
-    "chart.js": "^3.6.2",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "gulplog": "^1.0.0",
@@ -37,6 +35,8 @@
     "@types/jquery": "^3.5.5",
     "autoprefixer": "^10.4.2",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-postcss": "^9.0.1",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",

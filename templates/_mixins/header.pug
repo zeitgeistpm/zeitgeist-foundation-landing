@@ -19,9 +19,9 @@ mixin header
                     li.px-4
                         a.px-4.underline-offset-2.font-highlight.font-bold(href=item.url target=target class='hover:underline text-[2.5rem] lg:text-[2.8125rem]')=item.text
                 div.mobile-menu--social.flex
-                  each item in header.socialLinks
-                    a.flex.justify-center.items-center.rounded-full.bg-main.mx-2.mb-4.mt-16(href=item.url class='w-[3.25rem] h-[3.25rem] hover:bg-secondary' title=item.name target='_blank')
-                        img(src=item.icon alt=item.name class='h-2/5')
+                    each item in header.socialLinks
+                        a.flex.justify-center.items-center.rounded-full.bg-main.mx-2.mb-4.mt-16(href=item.url class='w-[3.25rem] h-[3.25rem] hover:bg-secondary' title=item.name target='_blank')
+                            img(src=item.icon alt=item.name class='h-2/5')
 
 
 
