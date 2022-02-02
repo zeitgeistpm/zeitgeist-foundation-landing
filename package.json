@@ -17,9 +17,9 @@
   "author": "@sinzii",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Web3Vietnam/hydradx-website/issues"
+    "url": "https://github.com/Koniverse/zeitgeist-foundation-landing/issues"
   },
-  "homepage": "https://github.com/Web3Vietnam/hydradx-website#readme",
+  "homepage": "https://github.com/Koniverse/zeitgeist-foundation-landing#readme",
   "dependencies": {
     "browserify": "^17.0.0",
     "gulp-sourcemaps": "^3.0.0",
