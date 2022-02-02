@@ -25,7 +25,7 @@ block content
             div.hidden(class='xl:block')
                 ul.left-menu.sticky.top-0.mb-4(class='w-[320px]')
                   each item in header.menu
-                    - target = (item.target && (item.url.startsWith('http') || item.url.startsWith('/'))) ? item.target : ''
+                    - var target = (item.target && (item.url.startsWith('http') || item.url.startsWith('/'))) ? item.target : ''
                     li.font-highlight.font-bold.uppercase.py-4(class='first:pt-2')
                         a.flex.items-center.text-secondary.no-underline(href=item.url target=target class='text-[2.125rem] leading-[3rem] hover:text-[#BCB8FF]')
                             img.pr-8.hidden(src='images/right-arrow.svg')

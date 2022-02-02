@@ -1,6 +1,7 @@
 const eventRegister = require('./eventRegister');
 const header = require('./data/header.json');
 const pageLinks = require('./data/pageLinks.json');
+const footerLinks = require('./data/footerLinks.json');
 
 module.exports = {
     baseUrl: 'https://koniverse.github.io/',
@@ -14,5 +15,6 @@ module.exports = {
     defaultLocale: 'en',
     eventRegister,
     header,
-    pageLinks
+    pageLinks,
+    footerLinks
 };
