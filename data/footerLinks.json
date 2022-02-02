@@ -1,0 +1,43 @@
+{
+  "general": [
+    {
+      "text": "Apps (Advanced UI)",
+      "url": "#",
+      "target": "_blank"
+    },
+    {
+      "text": "Website",
+      "url": "#",
+      "target": "_blank"
+    }
+  ],
+  "technology": [
+    {
+      "text": "Documentation",
+      "url": "#",
+      "target": "_blank"
+    },
+    {
+      "text": "Github",
+      "url": "#",
+      "target": "_blank"
+    }
+  ],
+  "community": [
+    {
+      "text": "Discord",
+      "url": "#",
+      "target": "_blank"
+    },
+    {
+      "text": "Telegram",
+      "url": "#",
+      "target": "_blank"
+    },
+    {
+      "text": "Twitter",
+      "url": "#",
+      "target": "_blank"
+    }
+  ]
+}
