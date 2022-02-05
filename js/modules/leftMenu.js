@@ -41,12 +41,23 @@ const trackingScrollTops = trackingAnchors.reduce((rs, section) => {
   return rs;
 }, {});
 
+const startHighlightScrollTop = $(trackingAnchors[0]).offset().top - 200;
+
 let currentAnchor = '';
 const highlightItemBasedOnScrollTop = function(e) {
   const location = window.location;
   const currentScrollTop = $(document).scrollTop();
 
   for (let section of trackingAnchors) {
+    if (currentScrollTop <= startHighlightScrollTop) {
+      if (currentAnchor !== '') {
+        currentAnchor = '';
+        window.history.replaceState({}, '', location.origin + location.pathname)
+        removeHighlightForAllItems();
+      }
+      return;
+    }
+
     if (currentScrollTop <= trackingScrollTops[section]) {
       if (currentAnchor !== section) {
         currentAnchor = section

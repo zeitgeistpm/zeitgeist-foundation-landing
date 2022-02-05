@@ -23,7 +23,7 @@ block content
 
         .flex(class='lg:mb-[6.25rem] mb-16 leading-[2.125rem]')
             div.hidden(class='xl:block')
-                ul.left-menu.sticky.top-0.mb-4(class='w-[320px]')
+                ul.left-menu.sticky.mb-4(class='w-[320px] top-8')
                   each item in header.menu
                     - var target = (item.target && (item.url.startsWith('http') || item.url.startsWith('/'))) ? item.target : ''
                     li.font-highlight.font-bold.uppercase.py-4(class='first:pt-2')
@@ -55,7 +55,7 @@ block content
                                 div.mr-0(class='w-[5.375rem] h-[5.375rem] lg:mr-[2.625rem] mb-[2.625rem]')
                                     img(src='images/gradient-ball.svg')
                             div
-                                h2.font-highlight.font-semibold.mb-8.text-white-shadow(class='text-[1.875rem] lg:text-[2.8125rem] leading-[1.22] mt-0 lg:mt-4') Philosophy
+                                h2.font-highlight.font-semibold.mb-8(class='text-[1.875rem] lg:text-[2.8125rem] leading-[1.22] mt-0 lg:mt-4') Philosophy
                                 p.mb-12 Our grants program's aim is to steward the prediction market ecosystem and carefully manage Zeitgeist Foundation resources. We provide grants that we believe will return the highest impact on the prediction market ecosystem over the long term.
                                 p.mb-4 Zeitgeist Foundation awards grants for specific projects and pieces of development work. Grant recipients should not be considered partners of Zeitgeist or the Zeitgeist Foundation.
                     div
