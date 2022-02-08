@@ -1,9 +1,11 @@
 const $ = require('jquery');
+const env = require('./env');
 
 const $body = $('body');
-const $mobileHeader = $('header');
-const $menuBtn = $mobileHeader.find('.hamburger');
-const $mobileMenu = $mobileHeader.find('.mobile-menu');
+const $header = $('header');
+const $menuBtn = $header.find('.hamburger');
+const $mobileMenu = $header.find('.mobile-menu');
+const $desktopMenu = $header.find('ul.desktop-menu');
 
 const toggleMobileMenu = () => {
     $menuBtn.toggleClass('open');
@@ -29,9 +31,20 @@ const handleMobileMenuLocalAnchors = () => {
     });
 }
 
+const showHideDesktopMenu = function () {
+    const currentScrollTop = $(document).scrollTop();
+    if (env.isMobile() || currentScrollTop > 0) {
+        $desktopMenu.fadeOut(100);
+    } else {
+        $desktopMenu.fadeIn(100);
+    }
+}
+
 const registerEvents = () => {
     $menuBtn.on('click', toggleMobileMenu);
     handleMobileMenuLocalAnchors();
+    document.addEventListener('scroll', showHideDesktopMenu);
+    window.addEventListener('resize', showHideDesktopMenu);
 }
 
 module.exports = () => {

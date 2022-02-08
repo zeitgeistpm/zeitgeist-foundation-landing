@@ -17,13 +17,13 @@ block content
           a.flex.justify-center.items-center.rounded-full.bg-main.mx-2.mb-6(href=item.url class='w-[3.25rem] h-[3.25rem] hover:bg-secondary' title=item.name target='_blank')
               img(src=item.icon alt=item.name class='h-2/5')
     div.text-xl.text-center(class='lg:text-left')
-        div(class='xl:mb-[15rem] lg:mb-[6rem] mb-[3rem]')
-            h1.font-highlight.font-bold.uppercase(class='xl:text-[11.25rem] xl:leading-[1.12] xl:mb-4 lg:text-[6.25rem] leading-[1.2] lg:mb-6 text-[3.125rem] mb-10 mt-10 lg:mt-0') Zeitgeist Foundation
+        div(class='xl:mb-[15rem] lg:mb-[6rem] mb-[3rem] xl:mx-[7rem] xl:mt-[5rem]')
+            h1.font-highlight.font-bold.uppercase(class='xl:text-[9rem] xl:leading-[1.12] xl:mb-4 lg:text-[6.25rem] leading-[1.2] lg:mb-6 text-[3.125rem] mb-10 mt-10 lg:mt-0') Zeitgeist Foundation
             h2.font-highlight.font-bold(class='text-[1.875rem] lg:text-6xl') Own your future
 
         .flex(class='lg:mb-[6.25rem] mb-16 leading-[2.125rem]')
             div.hidden(class='xl:block')
-                ul.left-menu.sticky.mb-4(class='w-[320px] top-8')
+                ul.left-menu.sticky.mb-4(class='w-[320px] top-[8rem]')
                   each item in header.menu
                     - var target = (item.target && (item.url.startsWith('http') || item.url.startsWith('/'))) ? item.target : ''
                     li.font-highlight.font-bold.uppercase.py-4(class='first:pt-2')
@@ -63,7 +63,7 @@ block content
                         p.mb-14 Our Grant Program provides grants for public applications, which are tracked transparently on Github and disbursed in cryptocurrencies.
                         a.inline-block(href=href=pageLinks.applyGrant.url target=pageLinks.applyGrant.target class='text-[1.625rem] rounded-[6.25rem] py-[0.8rem] px-[3.4rem]' style='background: linear-gradient(90deg, #1C1352 -13.04%, rgba(17, 106, 239, 0) 111.96%), #8F21E1;') Apply
                 div.mb-0#research(class='lg:mb-8')
-                    div.absolute.left-0.right-0.bg-no-repeat(class='xl:block lg:hidden block top-[2600px] h-[1630px] xl:bg-contain bg-size-200 opacity-70 -z-50' style='background-image: url(\'images/background-mid-2.png\')')
+                    div.background-mid-2.absolute.left-0.right-0.bg-no-repeat(class='xl:block lg:hidden block top-[2600px] h-[1630px] xl:bg-contain bg-size-200 opacity-70 -z-50' style='background-image: url(\'images/background-mid-2.png\')')
                     h2.font-highlight.font-bold.mb-12.text-white-shadow(class='text-[2.5rem] lg:text-6xl') Research
                     p.mb-12 Our research team confronts the most difficult research problems standing between us and a decentralized prediction market ecosystem.
                     p.mb-16 The Zeitgeist Foundation research is conducted in-house and in collaboration with various projects and research organizations.
