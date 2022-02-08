@@ -10,3 +10,16 @@ body {
     width: 100%;
   }
 }
+
+@media (max-width: 500px) {
+  .background-mid-2 {
+    top: 3000px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .background-mid-2 {
+    top: 3500px !important;
+  }
+}
+
