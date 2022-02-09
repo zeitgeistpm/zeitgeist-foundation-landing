@@ -33,7 +33,7 @@ const initMenuItemsEvents = () => {
         $('html, body').animate({
           scrollTop: $(href).offset().top
         }, 300);
-      }, 300);
+      }, isMobileMenuItem ? 300 : 0);
     });
 }
 
@@ -60,6 +60,17 @@ const showHideLogoOnScroll = function () {
   }
 }
 
+const initLogoEvents = function () {
+  $logo.find('> a').on('click', function (e) {
+    if ($(document).scrollTop() > 0) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: 0
+      }, 300);
+    }
+  });
+}
+
 const registerEvents = () => {
   $menuBtn.on('click', toggleMobileMenu);
   document.addEventListener('scroll', function () {
@@ -77,6 +88,7 @@ module.exports = () => {
   registerEvents();
 
   initMenuItemsEvents();
+  initLogoEvents();
   adjustHeaderHeight();
   showHideDesktopMenu();
 }
