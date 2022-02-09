@@ -39,7 +39,7 @@ const initMenuItemsEvents = () => {
 
 const showHideDesktopMenu = function () {
   const currentScrollTop = $(document).scrollTop();
-  if (env.isMobile() || currentScrollTop > 0) {
+  if (env.isMobile() || currentScrollTop > 100) {
     $desktopMenu.fadeOut(100);
   } else {
     $desktopMenu.fadeIn(100);
