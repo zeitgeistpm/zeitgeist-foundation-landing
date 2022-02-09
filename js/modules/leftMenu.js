@@ -26,7 +26,7 @@ const removeHighlightForAllItems = () => {
 
 const highlightItem = (hashName) => {
   removeHighlightForAllItems();
-  enableHighlight($leftMenu.find("li > a[href=\"" + hashName +"\"]"))
+  enableHighlight($leftMenu.find("li > a[href=\"" + hashName + "\"]"))
 }
 
 function locationHashChanged() {
@@ -44,20 +44,20 @@ const trackingScrollTops = trackingAnchors.reduce((rs, section) => {
 const startHighlightScrollTop = $(trackingAnchors[0]).offset().top - 200;
 
 let currentAnchor = '';
-const highlightItemBasedOnScrollTop = function(e) {
+const highlightItemBasedOnScrollTop = function (e) {
   const location = window.location;
   const currentScrollTop = $(document).scrollTop();
 
-  for (let section of trackingAnchors) {
-    if (currentScrollTop <= startHighlightScrollTop) {
-      if (currentAnchor !== '') {
-        currentAnchor = '';
-        window.history.replaceState({}, '', location.origin + location.pathname)
-        removeHighlightForAllItems();
-      }
-      return;
+  if (currentScrollTop <= startHighlightScrollTop) {
+    if (currentAnchor !== '') {
+      currentAnchor = '';
+      window.history.replaceState({}, '', location.origin + location.pathname)
+      removeHighlightForAllItems();
     }
+    return;
+  }
 
+  for (let section of trackingAnchors) {
     if (currentScrollTop <= trackingScrollTops[section]) {
       if (currentAnchor !== section) {
         currentAnchor = section
@@ -71,7 +71,7 @@ const highlightItemBasedOnScrollTop = function(e) {
 
 module.exports = () => {
   window.addEventListener("hashchange", locationHashChanged, false);
-  locationHashChanged();
-
   document.addEventListener('scroll', highlightItemBasedOnScrollTop, false);
+
+  locationHashChanged();
 }
