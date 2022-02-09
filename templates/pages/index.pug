@@ -23,7 +23,7 @@ block content
 
         .flex(class='lg:mb-[6.25rem] mb-16 leading-[2.125rem]')
             div.hidden(class='xl:block')
-                ul.left-menu.sticky.mb-4(class='w-[320px] top-[8rem]')
+                ul.left-menu.sticky.mb-4.relative.z-50(class='w-[320px] top-[8rem]')
                   each item in header.menu
                     - var target = (item.target && (item.url.startsWith('http') || item.url.startsWith('/'))) ? item.target : ''
                     li.font-highlight.font-bold.uppercase.py-4(class='first:pt-2')

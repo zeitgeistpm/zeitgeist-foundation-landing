@@ -6,6 +6,8 @@ const $header = $('header');
 const $menuBtn = $header.find('.hamburger');
 const $mobileMenu = $header.find('.mobile-menu');
 const $desktopMenu = $header.find('ul.desktop-menu');
+const $logo = $header.find('.logo');
+const $leftMenu = $('ul.left-menu');
 
 const toggleMobileMenu = () => {
     $menuBtn.toggleClass('open');
@@ -40,11 +42,34 @@ const showHideDesktopMenu = function () {
     }
 }
 
+const adjustHeaderHeight = function () {
+    $header.css('height', $header.outerHeight());
+}
+
+const showHideLogoOnScroll = function () {
+    const collideWithLeftMenu = $header.offset().top + $header.outerHeight() - 5 > $leftMenu.offset().top
+
+    if (collideWithLeftMenu && env.isDesktop()) {
+        $logo.fadeOut(100);
+    } else {
+        $logo.fadeIn(100);
+    }
+}
+
 const registerEvents = () => {
     $menuBtn.on('click', toggleMobileMenu);
+    document.addEventListener('scroll', function () {
+        showHideDesktopMenu();
+        showHideLogoOnScroll();
+    });
+
+    window.addEventListener('resize', function () {
+        showHideDesktopMenu();
+        adjustHeaderHeight();
+    });
+
     handleMobileMenuLocalAnchors();
-    document.addEventListener('scroll', showHideDesktopMenu);
-    window.addEventListener('resize', showHideDesktopMenu);
+    adjustHeaderHeight();
 }
 
 module.exports = () => {
